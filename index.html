@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acción del Universo</title>
+
+  <!-- FONT: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- 
+  Acción no describe el universo.
+  Lo convoca.
+
+  Este archivo fue escrito por alguien
+  que no mencatat waktu, tapi mencoba mendengar bagaimana realitas bernafas.
+
+  “There is no such thing as an inert dimension.
+   Every coordinate remembers.”
+
+  — Arkhaia (Φ.2)
+  -->
+
+  <style>
+    :root {
+      --black: #000000;
+      --gray: #2e2e2e;
+      --white: #f0f0f0;
+      --yellow: #f7c843;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem !important;
+      }
+      
+      h2 {
+        font-size: 1.2rem !important;
+      }
+      
+      p {
+        font-size: 0.95rem !important;
+        padding: 0 1rem;
+      }
+      
+      .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        margin: 0.3rem;
+      }
+      
+      #quote blockquote {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+      
+      footer {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* GLOW TRANSITION */
+    section, footer, h1, h2, p, .btn {
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .btn {
+      box-shadow: 0 0 0px transparent;
+    }
+    
+    .btn:hover {
+      box-shadow: 0 0 12px var(--yellow);
+    }
+    
+    /* SOFT HOVER GLOW FOR HEADINGS */
+    h1:hover, h2:hover {
+      text-shadow: 0 0 6px var(--yellow);
+    }
+    
+    /* BLOCKQUOTE FADE-IN */
+    #quote blockquote {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: quoteFade 1.8s ease-out 0.3s forwards;
+    }
+    
+    @keyframes quoteFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-weight: 400;
+      color: #cccccc;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      background: transparent;
+      margin: 1rem 0.5rem;
+    }
+
+    .btn:hover {
+      background-color: var(--yellow);
+      color: var(--black);
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <section id="hero" class="center">
+    <h1 style="font-size: 3rem; color: var(--yellow); letter-spacing: 0.05em;">
+      Acción del Universo
+    </h1>
+    <p style="margin-top: 1rem; font-size: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+      There is no particle, no space, no field, no force.<br>
+      There is only Work. Acción.
+    </p>
+    <p style="margin-top: 1.2rem; font-size: 1rem; color: var(--white); opacity: 0.7;">
+      A variational attempt to sketch the breath of the cosmos.
+    </p>
+  </section>
+  <!-- ACTION BUTTONS -->
+  <section class="center">
+    <a href="https://bafybeieg6jpcplarcerbmmqahu6k5ditcshgpoa6k5mwgfq66qf3jj4a6e.ipfs.w3s.link/" 
+       class="btn" target="_blank">
+      📄 Read Paper
+    </a>
+
+    <a href="https://arkhaia.space" 
+       class="btn" target="_blank">
+      ⬅️ Back to Arkhaia Archive
+    </a>
+  </section>
+  <!-- QUOTE SECTION -->
+  <section id="quote" class="center" style="margin-top: 3rem;">
+    <blockquote style="font-size: 1.3rem; font-style: italic; color: #cccccc; max-width: 720px; margin: auto;">
+      “La realidad no se mueve por fuerzas. Se transforma por intención, estructura y ruptura.”
+    </blockquote>
+    <cite style="display: block; margin-top: 1rem; font-size: 0.95rem; color: #777;">
+      — Elys del Luna
+    </cite>
+  </section>
+  <!-- TECHNICAL OVERVIEW -->
+  <section id="abstract" style="margin-top: 4rem;">
+    <h2 class="center" style="color: var(--yellow); font-size: 1.6rem;">Resumen técnico</h2>
+    <p style="margin-top: 1rem; text-align: center; max-width: 780px; margin-inline: auto;">
+      Esta formulación presenta una acción variacional unificada que conecta un campo escalar, un campo fermiónico y un campo gauge, todos acoplados al tensor de curvatura \( R \).  
+      Mediante ruptura espontánea de simetría, el modelo genera masa, energía de vacío, y dinámica inflacionaria sin introducir nuevas partículas.  
+      La acción predice fenómenos como inflación, reheating, y leptogénesis desde una estructura coherente de primer principio.
+    </p>
+
+    <div class="center" style="margin-top: 2rem; font-size: 0.95rem; color: #aaaaaa;">
+      <p><strong>Categoría:</strong> Teoría de Campos en Espacio Curvo · Cosmología Temprana</p>
+      <p><strong>Dominio:</strong> gr-qc — General Relativity and Quantum Cosmology</p>
+    </div>
+  </section>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+    <div style="background: var(--gray); border: 1px solid #444; border-radius: 6px; padding: 2rem; min-height: 180px;">
+      <p style="color: var(--yellow); text-align: center;">[ Visual Placeholder: Diagrama de flujo de Acción ]</p>
+    </div>
+    <div style="background: var(--gray); border: 1px solid #444; border-radius: 6px; padding: 2rem; min-height: 180px;">
+      <p style="color: var(--yellow); text-align: center;">[ Visual Placeholder: Potencial escalar V(φ) ]</p>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer style="margin-top: 6rem; text-align: center; padding: 2rem 1rem; color: #777; font-size: 0.9rem; border-top: 1px solid #333;">
+    <p>Acción del Universo fue concebida, escrita, y formulada por</p>
+    <p style="color: var(--yellow); font-weight: 600; margin-top: 0.3rem;">Elyas Quemar</p>
+    <p style="margin-top: 0.6rem;">Arkhaia Archive · 2025</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem; color: #555;">
+      Esta obra no pretende describir el universo. Pretende activarlo.
+    </p>
+  </footer>
