@@ -2,176 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Acción del Universo</title>
 
   <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- META BASIC -->
-  <meta name="description" content="Acción del Universo — a variational cosmological invocation by Elyas Quemar">
-  <meta name="keywords" content="Arkhaia, Acción, Quantum Cosmology, Metaphysical Formulation, Variational Gravity">
-  <meta name="author" content="Elyas Quemar">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="A theoretical framework unifying scalar, fermion, gauge, and gravitational fields in curved spacetime. Acción del Universo by Elyas Quemar." />
+  <meta name="author" content="Elyas Quemar" />
 
-  <!-- OG PREVIEW -->
-  <meta property="og:title" content="Acción del Universo — Arkhaia" />
-  <meta property="og:description" content="A silent invocation to the working structure of existence." />
-  <meta property="og:image" content="https://arkhaia.space/ark3.3.jpg" />
-  <meta property="og:url" content="https://arkhaia.space/accion/" />
-  <meta property="og:type" content="website" />
-
-  <!-- THEME COLOR -->
-  <meta name="theme-color" content="#1a1a1a" />
-
-  <!-- CSS NEO-CYBER CORE -->
-  <style>
-    :root {
-      --black: #0d0d0d;
-      --gray: #2e2e2e;
-      --white: #f0f0f0;
-      --yellow: #f7c843;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(145deg, var(--black), var(--gray));
-      color: var(--white);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      scroll-behavior: smooth;
-    }
-
-    a {
-      color: var(--yellow);
-      text-decoration: none;
-    }
-
-    section {
-      padding: 5rem 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      border: 2px solid var(--yellow);
-      color: var(--yellow);
-      background-color: transparent;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: 0.3s ease;
-      backdrop-filter: blur(2px);
-    }
-
-    .btn:hover {
-      background: var(--yellow);
-      color: var(--black);
-      box-shadow: 0 0 12px var(--yellow);
-    }
-
-    h1, h2 {
-      font-weight: 700;
-      color: var(--yellow);
-      letter-spacing: 0.05em;
-    }
-
-    p {
-      font-size: 1rem;
-      color: #ccc;
-      max-width: 720px;
-      margin: 1rem auto;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media screen and (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.3rem; }
-      .btn { font-size: 0.9rem; padding: 0.6rem 1.4rem; }
-    }
-  </style>
+  <!-- LINK TO CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <section id="hero" class="center">
-    <h1 style="font-size: 3.5rem;">Acción del Universo</h1>
-    <p style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.85;">
-      No hay partícula. No hay campo. No hay espacio.
-    </p>
-    <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.85;">
-      Solo hay trabajo. Acción.
-    </p>
-  </section>
-  <!-- QUOTE SECTION -->
-  <section id="quote" class="center">
-    <blockquote style="font-style: italic; font-size: 1.3rem; color: #bbbbbb; max-width: 720px; margin: auto; opacity: 0; animation: fadeIn 2s ease-out 0.3s forwards;">
-      “La acción no es una función del espacio... es la causa de su posibilidad.”
-    </blockquote>
-    <cite style="display: block; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-      — Elyas Quemar
-    </cite>
-  </section>
+  <!-- Background bintang bergerak -->
+  <div class="stars-bg"></div>
 
-  <!-- SUMMON DOCUMENT -->
-  <section class="center" style="margin-top: 4rem;">
-    <a href="https://bafybeieg6jpcplarcerbmmqahu6k5ditcshgpoa6k5mwgfq66qf3jj4a6e.ipfs.w3s.link/" class="btn" target="_blank">
-      ✦ Summon Document
-    </a>
-    <a href="https://arkhaia.space" class="btn" style="margin-left: 1rem;" target="_blank">
-      ← Back to Arkhaia
-    </a>
-  </section>
-    <!-- TECHNICAL OVERVIEW -->
-  <section id="technical" style="margin-top: 6rem;">
-    <h2 class="center" style="font-size: 1.4rem;">Estructura técnica</h2>
-    <p style="text-align: center;">
-      Una acción unificada en espacio-tiempo curvado, compuesta por un campo escalar, uno fermiónico y uno gauge, acoplados al tensor de Ricci y su dinámica.
-      La ruptura espontánea de simetría genera masa, energía de vacío y dinámica inflacionaria — sin introducir partículas nuevas.
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+          <h1 class="hero-title">Acción del Universo</h1>
+      <p class="hero-subtitle">
+        A Unified Scalar-Fermion-Gauge-Gravitational Action<br />
+        with Spontaneous Symmetry Breaking in Curved Spacetime
+      </p>
+            <div class="hero-buttons">
+        <a href="https://github.com/elys911/Accion" target="_blank" class="btn btn-primary">
+           View on GitHub
+        </a>
+        <a href="https://bafybeieg6jpcplarcerbmmqahu6k5ditcshgpoa6k5mwgfq66qf3jj4a6e.ipfs.w3s.link" target="_blank" class="btn btn-secondary">
+           Read the Paper
+        </a>
+      </div>
+    </div> <!-- end of .container -->
+  </section> <!-- end of .hero -->
+  <!-- Abstract Section -->
+<section class="abstract">
+  <div class="container">
+    <h2 class="section-title">Abstract</h2>
+    <p class="section-text">
+      We present a theoretical framework integrating scalar, fermionic, gauge, and gravitational sectors into a single action in curved spacetime. The model features spontaneous symmetry breaking, curvature-sensitive mass generation, and quantum corrections via renormalization group flow. This construction offers a minimal but powerful lens to explore mass, geometry, and vacuum structure as emergent from unified variational principles.
     </p>
-    <div class="center" style="margin-top: 2rem; font-size: 0.95rem; color: #aaaaaa;">
-      <p><strong>Categoría:</strong> Cosmología Cuántica · Relatividad General</p>
-      <p><strong>Dominio:</strong> gr-qc — General Relativity and Quantum Cosmology</p>
-    </div>
-  </section>
+  </div>
+</section>
+<!-- Diagram Section -->
+<section class="diagram">
+  <div class="container">
+    <h2 class="section-title">Unified Field Diagram</h2>
+    <img src="https://via.placeholder.com/800x400" alt="Diagram placeholder" class="diagram-img" />
+    <p class="section-caption">Each field contributes to curvature, mass generation, and cosmological evolution.</p>
+  </div>
+</section>
+<!-- Feature Section -->
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">Core Insights</h2>
+    <div class="features-grid">
 
-  <!-- FRAGMENTOS -->
-  <section id="fragments" style="margin-top: 4rem;">
-    <h2 class="center">Fragmentos</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 2rem;">
-      <div style="background: rgba(255,255,255,0.02); border: 1px solid #333; border-radius: 8px; padding: 1.5rem;">
-        <p style="text-align: center; color: var(--yellow); font-size: 0.95rem;">S = ∫ √-g [ R + αRψ̄ψ + ℒ<sub>ϕ,F</sub> ]</p>
+      <div class="feature-box">
+        <div class="feature-icon">🌌</div>
+        <h3 class="feature-title">Curvature-Coupled Matter</h3>
+        <p class="feature-text">Fermions acquire dynamic masses via curvature-sensitive coupling, unifying geometry and substance.</p>
       </div>
-      <div style="background: rgba(255,255,255,0.02); border: 1px solid #333; border-radius: 8px; padding: 1.5rem;">
-        <p style="text-align: center; color: var(--yellow); font-size: 0.95rem;">La masa emerge de la curvatura, no de la identidad.</p>
+
+      <div class="feature-box">
+        <div class="feature-icon">🔁</div>
+        <h3 class="feature-title">Spontaneous Symmetry Breaking</h3>
+        <p class="feature-text">Scalar fields trigger mass emergence and phase transitions across vacuum landscapes.</p>
       </div>
-      <div style="background: rgba(255,255,255,0.02); border: 1px solid #333; border-radius: 8px; padding: 1.5rem;">
-        <p style="text-align: center; color: var(--yellow); font-size: 0.95rem;">φ actúa como motor — pero también como resultado.</p>
+
+      <div class="feature-box">
+        <div class="feature-icon">⚙️</div>
+        <h3 class="feature-title">Renormalization Flow</h3>
+        <p class="feature-text">Energy-dependent coupling constants reveal quantum corrections across cosmological epochs.</p>
       </div>
+
     </div>
-  </section>
-  <!-- FOOTER -->
-  <footer style="margin-top: 6rem; text-align: center; padding: 2rem 1rem; color: #777; font-size: 0.9rem; border-top: 1px solid #333;">
-    <p>Acción del Universo — escrito por</p>
-    <p style="color: var(--yellow); font-weight: 600; margin-top: 0.3rem;">Elyas Quemar</p>
-    <p style="margin-top: 1rem; font-size: 0.8rem; color: #555;">
-      Formulado y sellado en el dominio Arkhaia · 2025
+  </div>
+</section>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer-text">
+      &copy; 2025 Elyas Quemar — <span class="footer-sub">Acción del Universo</span>
     </p>
-  </footer>
-</body></html>
+  </div>
+</footer>
+</body>
+</html>
+
+  
