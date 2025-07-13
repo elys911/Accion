@@ -376,7 +376,24 @@ h1 {
   transition: width 0.5s ease, height 0.5s ease;
 }
 
+@keyframes fadeIn {
+  0%   { opacity: 0; transform: translateY(40px); }
+  80%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 1; }
+}
+
 .btn:hover::after {
   width: 200%;
   height: 200%;
 }
+
+.mist-layer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
