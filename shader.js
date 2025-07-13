@@ -36,33 +36,58 @@
   uniform vec2 u_resolution;
   uniform float u_time;
 
-    vec3 gradient(float x) {
-    vec3 mint     = vec3(0.325, 0.961, 0.847); // #53f5d8
-    vec3 greenish = vec3(0.302, 0.780, 0.753);
-    vec3 grayish  = vec3(0.231, 0.329, 0.329);
-    vec3 blackish = vec3(0.004, 0.043, 0.051); // #010b0d (your new center)
+  vec3 gradient(float x) {
+    vec3 mint     = vec3(0.325, 0.961, 0.847);  // #53f5d8
+    vec3 greenish = vec3(0.302, 0.780, 0.753);  // #4de0cc
+    vec3 teal     = vec3(0.231, 0.718, 0.690);  // #3bb7b0
+    vec3 darkteal = vec3(0.173, 0.561, 0.588);  // #2d8f96
+    vec3 deepblue = vec3(0.063, 0.173, 0.286);  // #102e49
+    vec3 blackish = vec3(0.004, 0.043, 0.051);  // #010b0d
 
-    if (x < 0.005) {
-      float t = smoothstep(0.000, 0.005, x);
+    if (x < 0.001) {
+      return mint;
+    } else if (x < 0.0015) {
+      float t = smoothstep(0.001, 0.0015, x);
       return mix(mint, greenish, t);
-    } else if (x < 0.05) {
-      float t = smoothstep(0.005, 0.05, x);
-      return mix(greenish, grayish, t);
+    } else if (x < 0.003) {
+      float t = smoothstep(0.0015, 0.003, x);
+      return mix(greenish, teal, t);
+    } else if (x < 0.008) {
+      float t = smoothstep(0.003, 0.008, x);
+      return mix(teal, darkteal, t);
+    } else if (x < 0.02) {
+      float t = smoothstep(0.008, 0.02, x);
+      return mix(darkteal, deepblue, t);
     } else if (x < 0.5) {
-      float t = smoothstep(0.05, 0.5, x);
-      return mix(grayish, blackish, t);
-    } else if (x < 0.95) {
-      float t = smoothstep(0.5, 0.95, x);
-      return mix(blackish, grayish, t);
-    } else if (x < 0.995) {
-      float t = smoothstep(0.95, 0.995, x);
-      return mix(grayish, greenish, t);
+      float t = smoothstep(0.02, 0.5, x);
+      return mix(deepblue, blackish, t);
+    } else if (x < 0.98) {
+      float t = smoothstep(0.5, 0.98, x);
+      return mix(blackish, deepblue, t);
+    } else if (x < 0.992) {
+      float t = smoothstep(0.98, 0.992, x);
+      return mix(deepblue, darkteal, t);
+    } else if (x < 0.9965) {
+      float t = smoothstep(0.992, 0.9965, x);
+      return mix(darkteal, teal, t);
+    } else if (x < 0.9985) {
+      float t = smoothstep(0.9965, 0.9985, x);
+      return mix(teal, greenish, t);
     } else {
-      float t = smoothstep(0.995, 1.0, x);
+      float t = smoothstep(0.9985, 1.0, x);
       return mix(greenish, mint, t);
     }
   }
- </script>
+
+  void main() {
+    vec2 st = gl_FragCoord.xy / u_resolution.xy;
+    float offset = sin(u_time * 0.2) * 0.01;
+    float x = clamp(st.x + offset, 0.0, 1.0);
+    vec3 color = gradient(x);
+    gl_FragColor = vec4(color, 1.0);
+  }
+  </script>
+
 
   <script>
     const canvas = document.getElementById('shaderCanvas');
