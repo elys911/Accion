@@ -322,7 +322,7 @@ a, button, .feature-box, .btn {
   transition: all 0.3s ease-in-out;
 }
 
-/* Glow neon lembut saat hover tombol */
+/* Glow neon smooth hover button */
 .btn:hover {
   box-shadow: 0 0 12px rgba(0, 255, 209, 0.25);
 }
@@ -345,4 +345,38 @@ a, button, .feature-box, .btn {
 /* Section titles subtle glow */
 .section-title {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.06);
+}
+
+/* SHIMMER CYBER DELAY */
+@keyframes shimmerText {
+  0%   { text-shadow: 0 0 0px var(--yellow); }
+  50%  { text-shadow: 0 0 12px var(--yellow); }
+  100% { text-shadow: 0 0 0px var(--yellow); }
+}
+
+h1 {
+  animation: shimmerText 4s ease-in-out infinite;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(247, 200, 67, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:hover::after {
+  width: 200%;
+  height: 200%;
 }
