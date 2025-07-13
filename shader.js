@@ -30,47 +30,51 @@
     }
   </script>
 
-  <!-- Fragment Shader -->
   <script id="fragmentShader" type="x-shader/x-fragment">
     precision mediump float;
 
-    uniform vec2 u_resolution;
-    uniform float u_time;
+uniform vec2 u_resolution;
+uniform float u_time;
 
-    vec3 gradient(float x) {
-      vec3 mint     = vec3(0.325, 0.961, 0.847);  // #53f5d8
-      vec3 greenish = vec3(0.302, 0.780, 0.753);
-      vec3 grayish  = vec3(0.231, 0.329, 0.329);
-      vec3 blackish = vec3(0.125, 0.137, 0.141);  // #202324
+  vec3 gradient(float x) {
+    vec3 mint     = vec3(0.325, 0.961, 0.847); // #53f5d8
+    vec3 teal     = vec3(0.302, 0.780, 0.753); // tealish
+    vec3 grayish  = vec3(0.231, 0.329, 0.329); // #3b5857
+    vec3 darkgray = vec3(0.082, 0.114, 0.118); // #151d1e
+    vec3 blackish = vec3(0.004, 0.043, 0.051); // #010b0d
 
-      if (x < 0.15) {
-        float t = smoothstep(0.0, 0.15, x);
-        return mix(mint, greenish, t);
-      } else if (x < 0.3) {
-        float t = smoothstep(0.15, 0.3, x);
-        return mix(greenish, grayish, t);
-      } else if (x < 0.5) {
-        float t = smoothstep(0.3, 0.5, x);
-        return mix(grayish, blackish, t);
-      } else if (x < 0.7) {
-        float t = smoothstep(0.5, 0.7, x);
-        return mix(blackish, grayish, t);
-      } else if (x < 0.85) {
-        float t = smoothstep(0.7, 0.85, x);
-        return mix(grayish, greenish, t);
-      } else {
-        float t = smoothstep(0.85, 1.0, x);
-        return mix(greenish, mint, t);
-      }
+    if (x < 0.02) {
+      return mint;
+   }  else if (x < 0.04) {
+      float t = smoothstep(0.02, 0.04, x);
+      return mix(mint, teal, t);
+   }  else if (x < 0.08) {
+      float t = smoothstep(0.04, 0.08, x);
+      return mix(teal, grayish, t);
+   }  else if (x < 0.48) {
+      float t = smoothstep(0.08, 0.48, x);
+      return mix(grayish, blackish, t);
+   }  else if (x < 0.52) {
+      return blackish;
+   }  else if (x < 0.92) {
+      float t = smoothstep(0.52, 0.92, x);
+      return mix(blackish, grayish, t);
+   }  else if (x < 0.96) {
+      float t = smoothstep(0.92, 0.96, x);
+      return mix(grayish, teal, t);
+   }  else {
+      float t = smoothstep(0.96, 1.0, x);
+      return mix(teal, mint, t);
     }
+  }
 
-    void main() {
-      vec2 st = gl_FragCoord.xy / u_resolution.xy;
-      float offset = sin(u_time * 0.2) * 0.05;
-      float x = clamp(st.x + offset, 0.0, 1.0);
-      vec3 color = gradient(x);
-      gl_FragColor = vec4(color, 1.0);
-    }
+  void main() {
+    vec2 st = gl_FragCoord.xy / u_resolution.xy;
+    float offset = sin(u_time * 0.2) * 0.03;
+    float x = clamp(st.x + offset, 0.0, 1.0);
+    vec3 color = gradient(x);
+    gl_FragColor = vec4(color, 1.0);
+  }
   </script>
 
   <script>
