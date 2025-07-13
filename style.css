@@ -18,11 +18,12 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(
     to right,
-    #53f5d8 100%,
-    #4d877f 70%,
-    #202324 50%,
-    #4d877f 30%,
-    #53f5d8 0%
+    #53f5d8 0%,
+    #4d877f 5%,
+    #202324 20%,
+    #202324 80%,
+    #4d877f 95%,
+    #53f5d8 100%
   );
   color: #ffffff;
   line-height: 1.6;
