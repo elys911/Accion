@@ -20,16 +20,20 @@ body {
     to right,
     #53f5d8 0%,
     #4d877f 5%,
-    #202324 100%,
-    #202324 100%,
-    #4d877f 5%,
-    #53f5d8 0%
+    #3b5857 12%,
+    #202324 20%,
+    #202324 50%,
+    #202324 80%,
+    #3b5857 88%,
+    #4d877f 95%,
+    #53f5d8 100%
   );
   color: #ffffff;
   line-height: 1.6;
   font-size: 16px;
   overflow-x: hidden;
 }
+
 
 /* ====== HERO SECTION ====== */
 .hero {
