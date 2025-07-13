@@ -16,35 +16,35 @@ body {
 
     /* LEFT EDGE – MINT TOUCH */
     #53f5d8 0%,
-    #4de0cc 1%,
-    #3bb7b0 2%,
+    #4de0cc 0.25%,
+    #3bb7b0 0.5%,
 
     /* TEAL ZONE – DIM TRANSITION */
-    #2d8f96 4%,
-    #236b7c 6%,
-    #1a4c63 8%,
-    #102e49 10%,
+    #2d8f96 2%,
+    #236b7c 4%,
+    #1a4c63 6%,
+    #102e49 8%,
 
     /* BLACK FADE-IN */
-    #0a1a2f 12%,
-    #050f1b 14%,
-    #010b0d 16%,
+    #0a1a2f 10%,
+    #050f1b 12%,
+    #010b0d 14%,
 
     /* ABSOLUTE CENTER CORE – PURE BLACK */
     #010b0d 50%,
 
     /* MIRROR – RIGHT SIDE */
-    #010b0d 84%,
-    #050f1b 86%,
-    #0a1a2f 88%,
-    #102e49 90%,
-    #1a4c63 92%,
-    #236b7c 94%,
-    #2d8f96 96%,
+    #010b0d 86%,
+    #050f1b 88%,
+    #0a1a2f 90%,
+    #102e49 92%,
+    #1a4c63 94%,
+    #236b7c 96%,
+    #2d8f96 98%,
 
     /* MINT OUTRO RIGHT EDGE */
-    #3bb7b0 98%,
-    #4de0cc 99%,
+    #3bb7b0 99.5%,
+    #4de0cc 99.75%,
     #53f5d8 100%
   );
   background-attachment: fixed;
