@@ -11,46 +11,13 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(
-    to right,
-
-    /* LEFT AURA (mint → cyan → bluish) */
-    #53f5d8 0%,
-    #50e8d2 1%,
-    #4ad9c9 2%,
-    #45cbbf 3%,
-    #3fbcb4 4%,
-    #39ada9 5%,
-    #339e9e 6%,
-    #2e8e92 7%,
-    #287e87 8%,
-    #236f7b 9%,
-    #1e5f6f 10%,
-    #1b4f63 11%,
-    #183f57 12%,
-    #152f4b 13%,
-    #121f3f 14%,
-    #0f1a25 15%,
-    #0a1119 16%,
-    #010b0d 17%,
-    #010b0d 50%,
-    #010b0d 83%,
-    #0a1119 84%,
-    #0f1a25 85%,
-    #121f3f 86%,
-    #152f4b 87%,
-    #183f57 88%,
-    #1b4f63 89%,
-    #1e5f6f 90%,
-    #236f7b 91%,
-    #287e87 92%,
-    #2e8e92 93%,
-    #339e9e 94%,
-    #39ada9 95%,
-    #3fbcb4 96%,
-    #45cbbf 97%,
-    #4ad9c9 98%,
-    #50e8d2 99%,
+  background: radial-gradient(
+    ellipse at center,
+    #010b0d 0%,
+    #081418 15%,
+    #123038 30%,
+    #1e5f6f 50%,
+    #3fbcb4 75%,
     #53f5d8 100%
   );
   background-attachment: fixed;
