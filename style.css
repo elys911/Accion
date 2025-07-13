@@ -11,13 +11,48 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(
-    ellipse at center,
-    #010b0d 0%,
-    #081418 15%,
-    #123038 30%,
-    #1e5f6f 50%,
-    #3fbcb4 75%,
+  background: linear-gradient(
+    to right,
+
+    /* LEFT SHORE (cyan to teal) */
+    #53f5d8 0%,
+    #4ee4d0 2%,
+    #49d4c8 4%,
+    #44c4c0 6%,
+    #3fb4b8 8%,
+    #3aa4b0 10%,
+    #3594a8 12%,
+    #3084a0 14%,
+    #2b7488 16%,
+    #266478 18%,
+    #214468 20%,
+
+    /* DARK TRANSITION TO BLACK CORE */
+    #1b3548 22%,
+    #162538 24%,
+    #101528 26%,
+    #0a0518 28%,
+
+    /* CENTER ABSOLUTE BLACK CORE */
+    #010b0d 30%,
+    #010b0d 50%,
+    #010b0d 70%,
+
+    /* MIRRORED RIGHT SIDE */
+    #0a0518 72%,
+    #101528 74%,
+    #162538 76%,
+    #1b3548 78%,
+    #214468 80%,
+    #266478 82%,
+    #2b7488 84%,
+    #3084a0 86%,
+    #3594a8 88%,
+    #3aa4b0 90%,
+    #3fb4b8 92%,
+    #44c4c0 94%,
+    #49d4c8 96%,
+    #4ee4d0 98%,
     #53f5d8 100%
   );
   background-attachment: fixed;
