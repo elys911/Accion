@@ -18,17 +18,22 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(
     to right,
-    #53f5d8 0%,     /* mint */
-    #4d877f 2%,     /* grey */
-    #3b5857 5%,     /* old grey */
-    #2c403f 10%,    /* dark */
-    #202324 15%,    /* black */
-    #202324 50%,    /* black */
-    #202324 85%,    /* black */
-    #2c403f 90%,    /* grey */
-    #3b5857 95%,    /* grey */
-    #4d877f 98%,    /* grey */
-    #53f5d8 100%    /* mint */
+    #53f5d8 0%,
+    #50d8cb 2%,
+    #48c6b8 5%,
+    #3fa69b 10%,
+    #34807f 15%,
+    #2e6568 20%,
+    #273f49 25%,
+    #202324 30%,
+    #202324 70%,
+    #273f49 75%,
+    #2e6568 80%,
+    #34807f 85%,
+    #3fa69b 90%,
+    #48c6b8 95%,
+    #50d8cb 98%,
+    #53f5d8 100%
   );
   background-attachment: fixed;
   color: #ffffff;
