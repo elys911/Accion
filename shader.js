@@ -33,49 +33,36 @@
   <script id="fragmentShader" type="x-shader/x-fragment">
     precision mediump float;
 
-uniform vec2 u_resolution;
-uniform float u_time;
+  uniform vec2 u_resolution;
+  uniform float u_time;
 
-  vec3 gradient(float x) {
+    vec3 gradient(float x) {
     vec3 mint     = vec3(0.325, 0.961, 0.847); // #53f5d8
-    vec3 teal     = vec3(0.302, 0.780, 0.753); // tealish
-    vec3 grayish  = vec3(0.231, 0.329, 0.329); // #3b5857
-    vec3 darkgray = vec3(0.082, 0.114, 0.118); // #151d1e
-    vec3 blackish = vec3(0.004, 0.043, 0.051); // #010b0d
+    vec3 greenish = vec3(0.302, 0.780, 0.753);
+    vec3 grayish  = vec3(0.231, 0.329, 0.329);
+    vec3 blackish = vec3(0.004, 0.043, 0.051); // #010b0d (your new center)
 
-    if (x < 0.02) {
-      return mint;
-   }  else if (x < 0.04) {
-      float t = smoothstep(0.02, 0.04, x);
-      return mix(mint, teal, t);
-   }  else if (x < 0.08) {
-      float t = smoothstep(0.04, 0.08, x);
-      return mix(teal, grayish, t);
-   }  else if (x < 0.48) {
-      float t = smoothstep(0.08, 0.48, x);
+    if (x < 0.005) {
+      float t = smoothstep(0.000, 0.005, x);
+      return mix(mint, greenish, t);
+    } else if (x < 0.05) {
+      float t = smoothstep(0.005, 0.05, x);
+      return mix(greenish, grayish, t);
+    } else if (x < 0.5) {
+      float t = smoothstep(0.05, 0.5, x);
       return mix(grayish, blackish, t);
-   }  else if (x < 0.52) {
-      return blackish;
-   }  else if (x < 0.92) {
-      float t = smoothstep(0.52, 0.92, x);
+    } else if (x < 0.95) {
+      float t = smoothstep(0.5, 0.95, x);
       return mix(blackish, grayish, t);
-   }  else if (x < 0.96) {
-      float t = smoothstep(0.92, 0.96, x);
-      return mix(grayish, teal, t);
-   }  else {
-      float t = smoothstep(0.96, 1.0, x);
-      return mix(teal, mint, t);
+    } else if (x < 0.995) {
+      float t = smoothstep(0.95, 0.995, x);
+      return mix(grayish, greenish, t);
+    } else {
+      float t = smoothstep(0.995, 1.0, x);
+      return mix(greenish, mint, t);
     }
   }
-
-  void main() {
-    vec2 st = gl_FragCoord.xy / u_resolution.xy;
-    float offset = sin(u_time * 0.2) * 0.03;
-    float x = clamp(st.x + offset, 0.0, 1.0);
-    vec3 color = gradient(x);
-    gl_FragColor = vec4(color, 1.0);
-  }
-  </script>
+ </script>
 
   <script>
     const canvas = document.getElementById('shaderCanvas');
