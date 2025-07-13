@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #05060f;
+  background-color: #3d6970;
   color: #ffffff;
   line-height: 1.6;
   font-size: 16px;
@@ -317,7 +317,7 @@ h1, h2, h3 {
 
 /* ====== VISUAL ENHANCEMENTS ====== */
 
-/* Transisi halus untuk semua elemen interaktif */
+/* Smooth Transition For All Elemen Interactive */
 a, button, .feature-box, .btn {
   transition: all 0.3s ease-in-out;
 }
@@ -327,7 +327,7 @@ a, button, .feature-box, .btn {
   box-shadow: 0 0 12px rgba(0, 255, 209, 0.25);
 }
 
-/* Glow pada judul saat hover */
+/* Glow at title when hover */
 .hero-title:hover {
   text-shadow: 0 0 15px rgba(0, 255, 209, 0.2);
 }
@@ -337,7 +337,7 @@ a, button, .feature-box, .btn {
   border-color: #00ffd1;
 }
 
-/* Diagram glow saat hover */
+/* Diagram glow when hover */
 .diagram-img:hover {
   box-shadow: 0 0 40px rgba(0, 255, 209, 0.12);
 }
