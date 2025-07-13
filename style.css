@@ -32,13 +32,15 @@ body {
     #121f3f 14%,
     #0f0f33 15%,
     #0d0d2a 16%,
-
-    /* REPLACED BLACK WITH COSMIC BLUE */
+    #073c72 16.5%,
+    #094879 16.75%,
     #042f63 17%,
     #042f63 50%,
     #042f63 83%,
+    #094879 83.25%,
+    #073c72 83.5%,
 
-    /* RIGHT AURA (mirror) */
+    /* RIGHT AURA (bluish → mint) */
     #0d0d2a 84%,
     #0f0f33 85%,
     #121f3f 86%,
