@@ -11,7 +11,14 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #3d6970;
+  background: linear-gradient(
+    to right,
+    #00ffd1 0%,
+    #bc02f5 20%,
+    #202324 50%,
+    #bc02f5 80%,
+    #00ffd1 100%
+  );
   color: #ffffff;
   line-height: 1.6;
   font-size: 16px;
