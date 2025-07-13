@@ -15,93 +15,105 @@
 
   <!-- LINK TO CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- SHADER BACKGROUND CANVAS -->
+  <style>
+    #shaderCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -10;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
 </head>
 <body>
-  <!-- Background Moving Stars -->
-  <div class="stars-bg"></div>
-
-  <div class="mist-layer"></div>
+  <!-- WebGL Shader Canvas Background -->
+  <canvas id="shaderCanvas"></canvas>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-          <h1 class="hero-title">Acción del Universo</h1>
+      <h1 class="hero-title">Acción del Universo</h1>
       <p class="hero-subtitle">
         A Unified Scalar-Fermion-Gauge-Gravitational Action<br />
         with Spontaneous Symmetry Breaking in Curved Spacetime
       </p>
-            <div class="hero-buttons">
+      <div class="hero-buttons">
         <a href="https://github.com/elys911/Accion" target="_blank" class="btn btn-primary">
-           View on GitHub
+          View on GitHub
         </a>
         <a href="https://bafybeieg6jpcplarcerbmmqahu6k5ditcshgpoa6k5mwgfq66qf3jj4a6e.ipfs.w3s.link" target="_blank" class="btn btn-secondary">
-           Read the Paper
+          Read the Paper
         </a>
       </div>
-    </div> <!-- end of .container -->
-  </section> <!-- end of .hero -->
-  <!-- Abstract Section -->
-<section class="abstract">
-  <div class="container">
-    <h2 class="section-title">Abstract</h2>
-    <p class="section-text">
-      We present a theoretical framework integrating scalar, fermionic, gauge, and gravitational sectors into a single action in curved spacetime. The model features spontaneous symmetry breaking, curvature-sensitive mass generation, and quantum corrections via renormalization group flow. This construction offers a minimal but powerful lens to explore mass, geometry, and vacuum structure as emergent from unified variational principles.
-    </p>
-  </div>
-</section>
-<!-- Diagram Section -->
-<section class="diagram">
-  <div class="container">
-    <h2 class="section-title">Unified Field Diagram</h2>
-    <p class="section-caption">Each field contributes to curvature, mass generation, and cosmological evolution.</p>
-  </div>
-</section>
-<!-- Feature Section -->
-<section class="features">
-  <div class="container">
-    <h2 class="section-title">Core Insights</h2>
-    <div class="features-grid">
-
-      <div class="feature-box">
-        <div class="feature-icon">🌌</div>
-        <h3 class="feature-title">Curvature-Coupled Matter</h3>
-        <p class="feature-text">Fermions acquire dynamic masses via curvature-sensitive coupling, unifying geometry and substance.</p>
-      </div>
-
-      <div class="feature-box">
-        <div class="feature-icon">🔁</div>
-        <h3 class="feature-title">Spontaneous Symmetry Breaking</h3>
-        <p class="feature-text">Scalar fields trigger mass emergence and phase transitions across vacuum landscapes.</p>
-      </div>
-
-      <div class="feature-box">
-        <div class="feature-icon">⚙️</div>
-        <h3 class="feature-title">Renormalization Flow</h3>
-        <p class="feature-text">Energy-dependent coupling constants reveal quantum corrections across cosmological epochs.</p>
-      </div>
-
     </div>
-  </div>
-</section>
-<!-- ECUACIÓN -->
+  </section>
+
+  <!-- Abstract Section -->
+  <section class="abstract">
+    <div class="container">
+      <h2 class="section-title">Abstract</h2>
+      <p class="section-text">
+        We present a theoretical framework integrating scalar, fermionic, gauge, and gravitational sectors into a single action in curved spacetime. The model features spontaneous symmetry breaking, curvature-sensitive mass generation, and quantum corrections via renormalization group flow. This construction offers a minimal but powerful lens to explore mass, geometry, and vacuum structure as emergent from unified variational principles.
+      </p>
+    </div>
+  </section>
+
+  <!-- Diagram Section -->
+  <section class="diagram">
+    <div class="container">
+      <h2 class="section-title">Unified Field Diagram</h2>
+      <p class="section-caption">Each field contributes to curvature, mass generation, and cosmological evolution.</p>
+    </div>
+  </section>
+
+  <!-- Feature Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Core Insights</h2>
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">🌌</div>
+          <h3 class="feature-title">Curvature-Coupled Matter</h3>
+          <p class="feature-text">Fermions acquire dynamic masses via curvature-sensitive coupling, unifying geometry and substance.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">🔁</div>
+          <h3 class="feature-title">Spontaneous Symmetry Breaking</h3>
+          <p class="feature-text">Scalar fields trigger mass emergence and phase transitions across vacuum landscapes.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">⚙️</div>
+          <h3 class="feature-title">Renormalization Flow</h3>
+          <p class="feature-text">Energy-dependent coupling constants reveal quantum corrections across cosmological epochs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ecuación de Acción Section -->
   <section id="ecuacion" class="center" style="margin-top: 6rem;">
-  <h2 style="color: var(--yellow); font-size: 1.4rem;">Ecuación de Acción</h2>
-  <div class="equation-container">
-    <img 
-      src="https://elys911.github.io/Accion/assets/equation.1.svg"
-      alt="Ecuación de Acción"
-      class="equation-img" />
-  </div>
-</section>
-<!-- Footer Section -->
-<footer class="footer">
-  <div class="container">
-    <p class="footer-text">
-      &copy; 2025 Quemar Elyas — <span class="footer-sub">Acción</span>
-    </p>
-  </div>
-</footer>
+    <h2 style="color: var(--yellow); font-size: 1.4rem;">Ecuación de Acción</h2>
+    <div class="equation-container">
+      <img 
+        src="https://elys911.github.io/Accion/assets/equation.1.svg"
+        alt="Ecuación de Acción"
+        class="equation-img" />
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        &copy; 2025 Quemar Elyas — <span class="footer-sub">Acción</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- WebGL Shader Injection -->
+  <script src="shader.js"></script>
 </body>
 </html>
-
-  
