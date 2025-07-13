@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+.stars-bg {
+  display: none;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
