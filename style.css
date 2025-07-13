@@ -397,3 +397,21 @@ h1 {
   pointer-events: none;
 }
 
+.equation-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(3px);
+  text-align: center;
+}
+
+.equation-img {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(1.05);
+}
+
+
