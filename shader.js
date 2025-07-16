@@ -36,54 +36,25 @@
     uniform vec2 u_resolution;
     uniform float u_time;
     
-    vec3 gradient(float x) {
-      vec3 mint     = vec3(0.325, 0.961, 0.847); // #53f5d8
-      vec3 greenish = vec3(0.302, 0.780, 0.753); // #4de0cc
-      vec3 teal     = vec3(0.231, 0.718, 0.690); // #3bb7b0
-      vec3 darkteal = vec3(0.173, 0.561, 0.588); // #2d8f96
-      vec3 deepblue = vec3(0.063, 0.173, 0.286); // #102e49
-      vec3 blackish = vec3(0.004, 0.043, 0.051); // #010b0d
+    vec3 gernetVeilGradient(float x) {
+      vec3 dark = vec3(0.168, 0.047, 0.055);  // #2B0C0E
+      vec3 mid  = vec3(0.478, 0.176, 0.208);  // #7A2D35
+      vec3 light = vec3(0.769, 0.396, 0.396); // #C46565
 
-      if (x < 0.001) {
-        return mint;
-      } else if (x < 0.002) {
-        float t = smoothstep(0.001, 0.002, x);
-        return mix(mint, greenish, t);
-      } else if (x < 0.004) {
-        float t = smoothstep(0.002, 0.004, x);
-        return mix(greenish, teal, t);
-      } else if (x < 0.007) {
-        float t = smoothstep(0.004, 0.007, x);
-        return mix(teal, darkteal, t);
-      } else if (x < 0.015) {
-        float t = smoothstep(0.007, 0.015, x);
-        return mix(darkteal, deepblue, t);
-      } else if (x < 0.5) {
-        float t = smoothstep(0.015, 0.5, x);
-        return mix(deepblue, blackish, t);
-      } else if (x < 0.985) {
-        float t = smoothstep(0.5, 0.985, x);
-        return mix(blackish, deepblue, t);
-      } else if (x < 0.993) {
-        float t = smoothstep(0.985, 0.993, x);
-        return mix(deepblue, darkteal, t);
-      } else if (x < 0.996) {
-        float t = smoothstep(0.993, 0.996, x);
-        return mix(darkteal, teal, t);
-      } else if (x < 0.998) {
-        float t = smoothstep(0.996, 0.998, x);
-        return mix(teal, greenish, t);
+      if (x < 0.5) {
+        float t = smoothstep(0.0, 0.5, x);
+        return mix(dark, mid, t);
       } else {
-        float t = smoothstep(0.998, 1.0, x);
-        return mix(greenish, mint, t);
+        float t = smoothstep(0.5, 1.0, x);
+        return mix(mid, light, t);
       }
     }
 
     void main() {
     vec2 st = gl_FragCoord.xy / u_resolution.xy;
-    float offset = sin(u_time * 0.15) * 0.008;
+    float offset = sin(u_time * 0.1) * 0.03;
     float x = clamp(st.x + offset, 0.0, 1.0);
-    vec3 color = gradient(x);
+    vec3 color = gernetVeilGradient(x);
     gl_FragColor = vec4(color, 1.0);
     }
   </script>
