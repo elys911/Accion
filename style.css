@@ -9,43 +9,21 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  /* gradient “gernetVeil” */
+  --g1: #2B0C0E;
+  --g2: #7A2D35;
+  --g3: #C46565;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  /* Full-page colour gradient with smooth transition */
   background: linear-gradient(
-    to right,
-
-    /* LEFT EDGE – ULTRA-THIN MINT TOUCH */
-    #53f5d8 0%,
-    #4de0cc 0.05%,
-    #3bb7b0 0.1%,
-
-    /* TEAL ZONE – DIM TRANSITION */
-    #2d8f96 1%,
-    #236b7c 3%,
-    #1a4c63 5%,
-    #102e49 7%,
-
-    /* BLACK FADE-IN */
-    #0a1a2f 9%,
-    #050f1b 11%,
-    #010b0d 13%,
-
-    /* ABSOLUTE CENTER CORE – PURE BLACK */
-    #010b0d 50%,
-
-    /* MIRROR – RIGHT SIDE */
-    #010b0d 87%,
-    #050f1b 89%,
-    #0a1a2f 91%,
-    #102e49 93%,
-    #1a4c63 95%,
-    #236b7c 97%,
-    #2d8f96 99%,
-
-    /* ULTRA-THIN MINT OUTRO RIGHT EDGE */
-    #3bb7b0 99.9%,
-    #4de0cc 99.95%,
-    #53f5d8 100%
+    90deg,
+    var(--g1) 0%,
+    var(--g2) 50%,
+    var(--g3) 100%
   );
   background-attachment: fixed;
   color: #ffffff;
