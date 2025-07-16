@@ -86,7 +86,7 @@ body {
 
   .btn:hover {
     background-color: #1f2233;
-    color: #2b0c0e;
+    color: #1f2233;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(196, 101, 101, 0.3);
   }
