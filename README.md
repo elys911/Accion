@@ -6,12 +6,4 @@ A unified covariant field-theoretic action formulated in curved spacetime, combi
 **IPFS:**  [Link](https://bafybeieg6jpcplarcerbmmqahu6k5ditcshgpoa6k5mwgfq66qf3jj4a6e.ipfs.w3s.link/)   
 **Primary Categories:** gr-qc, astro-ph.CO
 
-## Files
-- `main.tex`: LaTeX source
-- `accion.pdf`: compiled paper
-- `refs.bib`: bibliography file
-- `figs/`: includes plots, diagrams, and visualizations
-- `simulations/`: optional numerical tools for φ(t), RG evolution, etc.
-
-## License
-Released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+Elyas Quemar, Arkhaia Archive.
